@@ -50,14 +50,36 @@
                 <label>
                     Favourite Cat
                     <select name="FavouriteCat" id="FavouriteCat">
-                        <option value="" disabled selected>Choose which of Travis' cats is your favourite</option>
-                        <option value="Maxwell">Maxwell</option>
-                        <option value="Tenley">Tenley</option>
-                        <option value="Mona">Mona</option>
+                        <option id="inputfield" disabled selected>Choose which of Travis' cats is your favourite</option>
+                        <option id="maxchoice" value="Maxwell">Maxwell: 7</option>
+                        <option id="Tenleychoice" value="Tenley">Tenley: 6</option>
+                        <option id="monachoice" value="Mona">Mona: 4</option>
                     </select>
                 </label>
             </div>
             <button type="button" onclick="userSubmit()">Submit</button>
+            <script>
+
+                let MaxwellVotes = 7
+                let MonaVotes = 4
+                let TenleyVotes = 6
+                function userSubmit() {
+                    userchoice = $('#FavouriteCat').serialize();
+                    console.log(userchoice)
+                    if (userchoice == "FavouriteCat=Maxwell") {
+                        MaxwellVotes++
+                        document.getElementById("maxchoice").innerHTML = "Maxwell: " + MaxwellVotes;
+
+                    } else if (userchoice == "FavouriteCat=Mona"){
+                        MonaVotes++
+                        document.getElementById("monachoice").innerHTML = "Mona: " + MonaVotes;
+
+                    }  else if (userchoice == "FavouriteCat=Tenley"){
+                        TenleyVotes++
+                        document.getElementById("Tenleychoice").innerHTML = "Tenley: " + TenleyVotes;}
+                    }  
+
+            </script>
         </form>
         <!-- TODO: add navigation to blog posts -->
     </aside>
@@ -121,6 +143,6 @@
         <h3>Made by Gage, Morgan and Varun</h3>
         <h6 class="m-0">Images provided by Travis Cattington</h6>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </body>
 </html>
