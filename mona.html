@@ -11,12 +11,22 @@
             .navbar {
                 justify-content: center;
             }
-            
+            .card {
+              width: 100%;
+            }
+            }
+
+        .centered {
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .card {
+          width: 85%;
         }
     </style>
 </head>
 <body>
-    <div class="position-sticky top-0 fixed-top" style="background-color: darkmagenta;">
+    <div class="position-sticky top-0 fixed-top" id="Sidebar" style="background-color: darkmagenta;">
         <div style="text-align: center;">
             <h1 class="text-light">
                 Mona
@@ -40,33 +50,34 @@
 
     <main class="container-fluid">
         <div class="row">
-            <aside class="col-md-3 align-items-center position-sticky gap-3" style="background-color: darkmagenta;">
-                <div>
-                    <div class="card justify-self-center"  style="width: 100%;">
-                        <img src="images/Mona/mona4.jpg" alt="Mona playing with feather">
-                        <div class="container">
-                          <p>Mona playing with a feather</p>
-                        </div>
+          <div class="col-md-2 position-sticky left-0 gap-3"   style="background-color: darkmagenta;">
+            <aside>
+                  <div class="card centered" >
+                      <img src="images/Mona/mona1.jpg" alt="Mona playing with feather">
+                      <div class="container">
+                        <p></p>
                       </div>
-                      <div class="card">
-                        <img src="images/Mona/mona5.jpg" alt="Mona basking in the PC heat">
-                        <div class="container">
-                          <p>Mona enjoying the heat of a PC</p>
-                        </div>
+                    </div>
+                    <div class="card centered">
+                      <img src="images/Mona/mona2.jpg" alt="Mona basking in the PC heat">
+                      <div class="container">
+                        <p></p>
                       </div>
-                      <div class="card">
-                        <img src="images/Mona/mona6.jpg" alt="Monas box home">
-                        <div class="container">
-                          <p>Mona making a new home in a box</p>
-                        </div>
+                    </div>
+                    <div class="card centered">
+                      <img src="images/Mona/mona3.jpg" alt="Monas box home">
+                      <div class="container">
+                        <p></p>
                       </div>
-    
-                </div>
+                    </div>
 
             </aside>
+
+          </div>
+            
                 
     
-            <div class="col-md-9">
+            <div class="col-md-10">
                 <section>
                     <H3>Biography</H3>
                     <p>“Mona is my sweet little weirdo – she is about 6 years old now. At first glance, she seems
@@ -78,7 +89,7 @@
                 </section>
                
     
-                <div id="MonaCarasoul1" class="carousel slide" data-bs-ride="carousel" style="width: 80%; justify-self: center;">
+                <div id="MonaCarasoul1" class="carousel slide" data-bs-ride="carousel" style="width: 90%; justify-self: center;">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
                         <img src="images/Mona/mona1.jpg" class="d-block w-100" alt="...">
