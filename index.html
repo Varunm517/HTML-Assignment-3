@@ -14,6 +14,10 @@
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+        .navbar-collapse {
+            width: 100%;
+
+        }
     </style>
 </head>
 <body>
@@ -22,13 +26,13 @@
         <header class="text-center text-light h-50 overflow-y-visible bg-black">
             <h1>Travis' Cats</h1>
         </header>
-        <nav class="navbar navbar-expand-md h-50 pt-0 bg-black" data-bs-theme="dark">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg h-50 pt-0 bg-black" data-bs-theme="dark">
+            <div class="container-fluid" style="background-color: black;">
                 <a href="index.html" class="navbar-brand active" aria-current="page">Travis' Cats</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse " id="navbarSupportedContent" >
                     <ul class="navbar-nav">
                         <li class="nav-item"><a href="maxwell.html" class="nav-link">Maxwell</a></li>
                         <li class="nav-item"><a href="tenley.html" class="nav-link">Tenley</a></li>
@@ -50,7 +54,7 @@
                 <label>
                     Favourite Cat
                     <select name="FavouriteCat" id="FavouriteCat">
-                        <option id="inputfield" disabled selected>Choose which of Travis' cats is your favourite</option>
+                        <option id="inputfield" disabled selected>Vote for your favourite cat!</option>
                         <option id="maxchoice" value="Maxwell">Maxwell: 7</option>
                         <option id="Tenleychoice" value="Tenley">Tenley: 6</option>
                         <option id="monachoice" value="Mona">Mona: 4</option>
