@@ -14,18 +14,39 @@
             .card {
               width: 100%;
             }
-            }
+
+          }
+
+         
+
+          @media screen and (min-width: 786px) {
+            div#col-left, div#col-right {
+            max-height: 73vh;          
+            overflow-y: scroll;}
+      
+            .boder {
+            overflow-y: hidden;
+            
+          }
+
+          }
+          
+          
+
+          
+          
 
         .centered {
           margin-left: auto;
           margin-right: auto;
         }
         .card {
-          width: 85%;
+          width: 100%;
         }
+        
     </style>
 </head>
-<body>
+<body class="boder">
     <div class="position-sticky top-0 fixed-top" id="Sidebar" style="background-color: darkmagenta;">
         <div style="text-align: center;">
             <h1 class="text-light">
@@ -49,25 +70,25 @@
     </div>
 
     <main class="container-fluid">
-        <div class="row">
-          <div class="col-md-2 position-sticky left-0 gap-3"   style="background-color: darkmagenta;">
+        <div class="row d-flex">
+          <div class="col-md-2 col-12 gap-3" id="col-left" style="background-color: darkmagenta;">
             <aside>
                   <div class="card centered" >
-                      <img src="images/Mona/mona1.jpg" alt="Mona playing with feather">
+                      <img src="images/Mona/mona7.jpg" alt="Mona playing with feather">
                       <div class="container">
-                        <p></p>
+                        <p>Mona basking in the heat of the PC</p>
                       </div>
                     </div>
                     <div class="card centered">
-                      <img src="images/Mona/mona2.jpg" alt="Mona basking in the PC heat">
+                      <img src="images/Mona/mona8.jpg" alt="Mona basking in the PC heat">
                       <div class="container">
-                        <p></p>
+                        <p>Mona making a new home in a box</p>
                       </div>
                     </div>
                     <div class="card centered">
-                      <img src="images/Mona/mona3.jpg" alt="Monas box home">
+                      <img src="images/Mona/mona9.jpg" alt="Monas box home">
                       <div class="container">
-                        <p></p>
+                        <p>Monas nap being disturbed</p>
                       </div>
                     </div>
 
@@ -77,7 +98,7 @@
             
                 
     
-            <div class="col-md-10">
+            <div class="col-md-10 col-12" id="col-right">
                 <section>
                     <H3>Biography</H3>
                     <p>“Mona is my sweet little weirdo – she is about 6 years old now. At first glance, she seems
