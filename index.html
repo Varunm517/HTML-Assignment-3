@@ -9,7 +9,7 @@
     <style>
         .blogpost {
             margin: 20px;
-            padding: 20px;
+            padding: 10px;
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -60,45 +60,49 @@
 
     <aside>
         <!-- TODO: add JavaScript to update data based on user input -->
-        <form class="container blogpost align-items-center">
-            <h3>Favourite Cat Survey!</h3>
-            <div class="row">
-                <label>Name <input type="text" name="Name" id="Name"></label>
-            </div>
-            <div class="row">
-                <label>
-                    Favourite Cat
-                    <select name="FavouriteCat" id="FavouriteCat">
-                        <option id="inputfield" disabled selected>Vote for your favourite cat!</option>
-                        <option id="maxchoice" value="Maxwell">Maxwell: 7</option>
-                        <option id="Tenleychoice" value="Tenley">Tenley: 6</option>
-                        <option id="monachoice" value="Mona">Mona: 4</option>
-                    </select>
-                </label>
-            </div>
-            <button type="button" onclick="userSubmit()">Submit</button>
-            <script>
+         <section class="blogpost">
+            <form class="container align-items-center">
+                <h3>Favourite Cat Survey!</h3>
+                <div class="row">
+                    <label>Name <input type="text" name="Name" id="Name"></label>
+                </div>
+                <div class="row">
+                    <label>
+                        Favourite Cat
+                        <select name="FavouriteCat" id="FavouriteCat">
+                            <option id="inputfield" disabled selected>Vote for your favourite cat!</option>
+                            <option id="maxchoice" value="Maxwell">Maxwell: 7</option>
+                            <option id="Tenleychoice" value="Tenley">Tenley: 6</option>
+                            <option id="monachoice" value="Mona">Mona: 4</option>
+                        </select>
+                    </label>
+                </div>
+                <button type="button" onclick="userSubmit()">Submit</button>
+                <script>
+    
+                    let MaxwellVotes = 7
+                    let MonaVotes = 4
+                    let TenleyVotes = 6
+                    function userSubmit() {
+                        userchoice = $('#FavouriteCat').serialize();
+                        console.log(userchoice)
+                        if (userchoice == "FavouriteCat=Maxwell") {
+                            MaxwellVotes++
+                            document.getElementById("maxchoice").innerHTML = "Maxwell: " + MaxwellVotes;
+    
+                        } else if (userchoice == "FavouriteCat=Mona"){
+                            MonaVotes++
+                            document.getElementById("monachoice").innerHTML = "Mona: " + MonaVotes;
+    
+                        }  else if (userchoice == "FavouriteCat=Tenley"){
+                            TenleyVotes++
+                            document.getElementById("Tenleychoice").innerHTML = "Tenley: " + TenleyVotes;}
+                        }  
+    
+                </script>
 
-                let MaxwellVotes = 7
-                let MonaVotes = 4
-                let TenleyVotes = 6
-                function userSubmit() {
-                    userchoice = $('#FavouriteCat').serialize();
-                    console.log(userchoice)
-                    if (userchoice == "FavouriteCat=Maxwell") {
-                        MaxwellVotes++
-                        document.getElementById("maxchoice").innerHTML = "Maxwell: " + MaxwellVotes;
-
-                    } else if (userchoice == "FavouriteCat=Mona"){
-                        MonaVotes++
-                        document.getElementById("monachoice").innerHTML = "Mona: " + MonaVotes;
-
-                    }  else if (userchoice == "FavouriteCat=Tenley"){
-                        TenleyVotes++
-                        document.getElementById("Tenleychoice").innerHTML = "Tenley: " + TenleyVotes;}
-                    }  
-
-            </script>
+         </section>
+       
         </form>
         <!-- TODO: add navigation to blog posts -->
     </aside>
